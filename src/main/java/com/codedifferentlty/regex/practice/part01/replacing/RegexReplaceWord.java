@@ -19,14 +19,15 @@ public class RegexReplaceWord {
 
     //a integer reprecented the nth occurence of that word to replace
 
-    public static String replaceNthWord(String regex, String replace,Integer n, String input){
-        Pattern p = Pattern.compile(regex);
-        Matcher m = p.matcher(input);
-        String temp = "";
-        while (m.find(n)){
-            temp = m.replaceFirst(replace);
-        }
-        return temp;
-    }
+//    public static String replaceNthWord(String regex, String replace,Integer n, String input){
+//        Pattern p = Pattern.compile(regex);
+//        Matcher m = p.matcher(input);
+//        String temp = "";
+//        while (m.find(n)){
+//            temp += m.replaceFirst(replace);
+//            break;
+//        }
+//        return temp;
+//    }
 
 }
