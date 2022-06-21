@@ -20,7 +20,7 @@ public class RegexWordCounterTest {
     @Test
     public void oneWordTest01(){
         String REGEX = "\\bcat\\b";
-        String input = "cat rat pat mat lat sat hat";
+        String input = "cat cot rat crat pat mat cit lat sat cax hat";
         Integer expected = 1;
         Integer actual = wordCounter.countWordOccurrences(REGEX, input);
         Assertions.assertEquals(expected,actual);
@@ -28,7 +28,7 @@ public class RegexWordCounterTest {
 
     @Test
     public void multipleWordTest01(){
-        String REGEX = "at\\b";
+        String REGEX = "[a-zA-Z]*at\\b";
         String input = "cat rat pat cot mat lat sat sit hat cut chet chat mast frat";
         Integer expected = 9;
         Integer actual = wordCounter.countWordOccurrences(REGEX, input);
@@ -38,8 +38,8 @@ public class RegexWordCounterTest {
     @Test
     public void prefixWordTest01(){
         String REGEX = "\\bnon";
-        String input = "bicycle disagree bilingual bisect extraordinary nonsense embrace nonentity nondescript";
-        Integer expected = 3;
+        String input = " never bicycle node disagree nod bilingual bisect none extraordinary nonsense embrace nonentity nondescript";
+        Integer expected = 4;
         Integer actual = wordCounter.countWordOccurrences(REGEX, input);
         Assertions.assertEquals(expected,actual);
     }
