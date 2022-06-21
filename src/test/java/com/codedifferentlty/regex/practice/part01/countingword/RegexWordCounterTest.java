@@ -22,7 +22,7 @@ public class RegexWordCounterTest {
         String REGEX = "\\bcat\\b";
         String input = "cat rat pat mat lat sat hat";
         Integer expected = 1;
-        Integer actual = RegexWordCounter.countWordOccurrences(REGEX, input);
+        Integer actual = wordCounter.countWordOccurrences(REGEX, input);
         Assertions.assertEquals(expected,actual);
     }
 
@@ -31,7 +31,7 @@ public class RegexWordCounterTest {
         String REGEX = "at\\b";
         String input = "cat rat pat cot mat lat sat sit hat cut chet chat mast frat";
         Integer expected = 9;
-        Integer actual = RegexWordCounter.countWordOccurrences(REGEX, input);
+        Integer actual = wordCounter.countWordOccurrences(REGEX, input);
         Assertions.assertEquals(expected,actual);
     }
 
@@ -40,7 +40,7 @@ public class RegexWordCounterTest {
         String REGEX = "\\bnon";
         String input = "bicycle disagree bilingual bisect extraordinary nonsense embrace nonentity nondescript";
         Integer expected = 3;
-        Integer actual = RegexWordCounter.countWordOccurrences(REGEX, input);
+        Integer actual = wordCounter.countWordOccurrences(REGEX, input);
         Assertions.assertEquals(expected,actual);
     }
 }
