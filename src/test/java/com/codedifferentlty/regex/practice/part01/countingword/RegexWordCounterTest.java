@@ -43,4 +43,5 @@ public class RegexWordCounterTest {
         Integer actual = wordCounter.countWordOccurrences(REGEX, input);
         Assertions.assertEquals(expected,actual);
     }
+
 }
