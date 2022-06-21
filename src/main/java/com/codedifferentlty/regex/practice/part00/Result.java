@@ -1,17 +1,27 @@
 package com.codedifferentlty.regex.practice.part00;
 
-public class Result {
-    /*
-     * Complete the 'repeatedString' function below.
-     *
-     * The function is expected to return a LONG_INTEGER.
-     * The function accepts following parameters:
-     *  1. STRING s
-     *  2. LONG_INTEGER n
-     */
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Result {
+    //logic
+    // create variable (input string repeated infinitely)
+    // loop through n characters
+    // return count # of a
     public long repeatedString(String s, long n) {
-        // Write your code here
-        return 0;
+        long count = 0;
+        for (int a = 0; a < s.length(); a++) {
+            if (s.charAt(a) == 'a') {
+                count++;
+            }
+        }
+        count = count * n / s.length();
+        for (int a = 0; a < n % s.length(); a++) {
+            if (s.charAt(a) == 'a') {
+                count++;
+            }
+        }
+        return count;
     }
 }
